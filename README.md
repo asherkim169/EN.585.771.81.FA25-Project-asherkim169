@@ -14,20 +14,20 @@ Linear Regression vs Neural Networks (Streamlit)
     1.2 The goal is to compare traditional regression with neural networks under different architectural choices and training settings.
 
 2. How to Run the Code
-Step 1: Install Required Packages
-pip install streamlit pandas numpy statsmodels scikit-learn torch matplotlib
-If PyTorch is not installed:
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+* Step 1: Install Required Packages
+    pip install streamlit pandas numpy statsmodels scikit-learn torch matplotlib
+    If PyTorch is not installed:
+    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
-Step 2: Place the Data File
-Ensure the following file exists at the path specified in the code:
-time_series_covid19_confirmed_global.csv
-This file contains global COVID-19 confirmed case counts.
+* Step 2: Place the Data File
+    Ensure the following file exists at the path specified in the code:
+    time_series_covid19_confirmed_global.csv
+    This file contains global COVID-19 confirmed case counts.
 
-Step 3: Launch the Streamlit App
-streamlit run A_Kim_Capstone_Project.py
+* Step 3: Launch the Streamlit App
+    streamlit run A_Kim_Capstone_Project.py
 
-A browser window will open automatically.
+    A browser window will open automatically.
 
 3. How to Use the App
 
