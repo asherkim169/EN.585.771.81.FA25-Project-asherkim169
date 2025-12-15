@@ -58,12 +58,12 @@ If the country name does not match the dataset, a warning is shown.
     4.3 Time Series Preparation
         - def prepare_country_data(df, country, k=5):
         - Steps:
-            - Filters data for the selected country
-            - Aggregates provinces (if applicable)
-            - Transposes data so rows represent days
-            - Defines day 0 as the first day with >0 cases
-            - Creates 5 lag variables: 
-                - 𝑌t-1 ........ Yt-5
+          - Filters data for the selected country
+          - Aggregates provinces (if applicable)
+          - Transposes data so rows represent days
+          - Defines day 0 as the first day with >0 cases
+          - Creates 5 lag variables: 
+            - 𝑌t-1 ........ Yt-5
 
     4.4 Distributed Lag Linear Regression
         - def fit_distributed_lag(ts, k=5):
