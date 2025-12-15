@@ -1,7 +1,6 @@
-# EN.585.771.81.FA25-Project-asherkim169
-EN.585.771.81.FA25 Capstone Project
+# EN.585.771.81.FA25 Capstone Project - Asher Kim
 
-COVID-19 Case Prediction App
+## COVID-19 Case Prediction App
 
 Linear Regression vs Neural Networks (Streamlit)
 
