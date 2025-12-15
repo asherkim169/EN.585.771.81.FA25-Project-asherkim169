@@ -39,12 +39,12 @@ Linear Regression vs Neural Networks (Streamlit)
             - China
             - Italy
         3.1.2 Neural Network Architecture
-            - Select number of hidden layers (1–8)
-            - Select number of nodes per layer (1–4)
+              - Select number of hidden layers (1–8)
+              - Select number of nodes per layer (1–4)
         3.1.3 Training Hyperparameters
-            - Number of epochs
-            - Learning rate
-
+              - Number of epochs
+              - Learning rate
+   
     3.2 Outputs
         3.2.1 Prediction plot showing:
             - True case counts
@@ -67,48 +67,46 @@ If the country name does not match the dataset, a warning is shown.
 
     4.4 Distributed Lag Linear Regression
         - def fit_distributed_lag(ts, k=5):
-
-
-Implements:
-𝑌t = 𝛼0 + 𝛽1Yt-1 + ⋯ + 𝛽5𝑌𝑡−5 + 𝜖𝑡
--Fitted using OLS
--Used as a baseline model
--Produces in-sample predictions and MSE
-
+        - Implements:
+          - 𝑌t = 𝛼0 + 𝛽1Yt-1 + ⋯ + 𝛽5𝑌𝑡−5 + 𝜖𝑡
+          - Fitted using OLS
+          - Used as a baseline model
+          - Produces in-sample predictions and MSE
+   
 4.5 Neural Network Architecture
-class DynamicNet(nn.Module):
--Fully connected feedforward network
--User-controlled:
---Number of hidden layers
---Nodes per layer
--ReLU activation for hidden layers
--Linear output layer
+    4.5.1 class DynamicNet(nn.Module):
+          - Fully connected feedforward network
+          - User-controlled:
+            - Number of hidden layers
+            - Nodes per layer
+          - ReLU activation for hidden layers
+          - Linear output layer
 
 4.6 Neural Network Training
-def train_nn(...)
--Uses Mean Squared Error loss
--Adam optimizer
--Early stopping for efficiency
--Trains on first half of time series
--Evaluates on second half
+    4.6.1 def train_nn(...)
+    - Uses Mean Squared Error loss
+    - Adam optimizer
+    - Early stopping for efficiency
+    - Trains on first half of time series
+    - Evaluates on second half
 
 4.7 Model Comparison
--OLS regression MSE
--Neural network MSE for each configuration
--Results stored in a table and sorted by error
+    - OLS regression MSE
+    - Neural network MSE for each configuration
+    - Results stored in a table and sorted by error
 
 4.8 Visualization
--Line plot comparing:
--True case counts
--OLS predictions
--Neural network predictions
--Helps visually assess overfitting and prediction accuracy
+    - Line plot comparing:
+    - True case counts
+    - OLS predictions
+    - Neural network predictions
+    - Helps visually assess overfitting and prediction accuracy
 
 5. Interpretation of Results
--OLS provides a simple linear benchmark
--Neural networks can capture nonlinear dynamics
--Increasing layers and nodes does not always improve performance
--MSE comparison highlights the bias–variance tradeoff
+   - OLS provides a simple linear benchmark
+   - Neural networks can capture nonlinear dynamics
+   - Increasing layers and nodes does not always improve performance
+   - MSE comparison highlights the bias–variance tradeoff
 
 6. Link to video
-https://github.com/asherkim169/EN.585.771.81.FA25-Project-asherkim169/blob/main/A_Kim_Capstone_Video.mp4
+   - https://github.com/asherkim169/EN.585.771.81.FA25-Project-asherkim169/blob/main/A_Kim_Capstone_Video.mp4
