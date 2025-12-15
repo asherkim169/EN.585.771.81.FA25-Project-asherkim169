@@ -31,19 +31,19 @@ Linear Regression vs Neural Networks (Streamlit)
 
 3. How to Use the App
 
-3.1 User Inputs (Left Panel)
-3.1.1 Country Name (Text Field)
-Enter a country exactly as it appears in the dataset
-Example:
--Korea, South
--China
--Italy
-3.1.2 Neural Network Architecture
--Select number of hidden layers (1–8)
--Select number of nodes per layer (1–4)
-3.1.3 Training Hyperparameters
--Number of epochs
--Learning rate
+    3.1 User Inputs (Left Panel)
+        3.1.1 Country Name (Text Field)
+            Enter a country exactly as it appears in the dataset
+            Example:
+            * Korea, South
+            * China
+            * Italy
+        3.1.2 Neural Network Architecture
+            * Select number of hidden layers (1–8)
+            * Select number of nodes per layer (1–4)
+        3.1.3 Training Hyperparameters
+            * Number of epochs
+            * Learning rate
 
 3.2 Outputs
 3.2.1 Prediction plot showing:
