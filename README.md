@@ -132,3 +132,4 @@ def train_nn(...)
 -MSE comparison highlights the bias–variance tradeoff
 
 6. Link to video
+https://github.com/asherkim169/EN.585.771.81.FA25-Project-asherkim169/blob/main/A_Kim_Capstone_Video.mp4
