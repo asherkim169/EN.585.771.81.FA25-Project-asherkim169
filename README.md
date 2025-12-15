@@ -35,59 +35,38 @@ Linear Regression vs Neural Networks (Streamlit)
         3.1.1 Country Name (Text Field)
             Enter a country exactly as it appears in the dataset
             Example:
-            * Korea, South
-            * China
-            * Italy
+            - Korea, South
+            - China
+            - Italy
         3.1.2 Neural Network Architecture
-            * Select number of hidden layers (1–8)
-            * Select number of nodes per layer (1–4)
+            - Select number of hidden layers (1–8)
+            - Select number of nodes per layer (1–4)
         3.1.3 Training Hyperparameters
-            * Number of epochs
-            * Learning rate
+            - Number of epochs
+            - Learning rate
 
     3.2 Outputs
         3.2.1 Prediction plot showing:
-            * True case counts
-            * OLS regression predictions
-            * Neural network predictions
+            - True case counts
+            - OLS regression predictions
+            - Neural network predictions
         3.2.2 Summary table comparing Mean Squared Error (MSE) across models
 
 If the country name does not match the dataset, a warning is shown.
 
 4. Code Breakdown
-    4.1 Imports
-        import streamlit as st
-        import pandas as pd
-        import numpy as np
-        import statsmodels.api as sm
-        import torch
+    4.3 Time Series Preparation
+        - def prepare_country_data(df, country, k=5):
+        - Steps:
+            - Filters data for the selected country
+            - Aggregates provinces (if applicable)
+            - Transposes data so rows represent days
+            - Defines day 0 as the first day with >0 cases
+            - Creates 5 lag variables: 
+                - 𝑌t-1 ........ Yt-5
 
--streamlit: Web app interface
--pandas, numpy: Data handling
--statsmodels: Linear regression (OLS)
--torch: Neural network modeling
--sklearn: Scaling and MSE evaluation
-
-4.2 Data Loading
-@st.cache_data
-def load_data(path):
-    return pd.read_csv(path)
--Loads the CSV once
--Caches data to speed up app reruns
-
-4.3 Time Series Preparation
-def prepare_country_data(df, country, k=5):
-
-Steps:
--Filters data for the selected country
--Aggregates provinces (if applicable)
--Transposes data so rows represent days
--Defines day 0 as the first day with >0 cases
--Creates 5 lag variables: 
-𝑌t-1 ........ Yt-5
-
-4.4 Distributed Lag Linear Regression
-def fit_distributed_lag(ts, k=5):
+    4.4 Distributed Lag Linear Regression
+        - def fit_distributed_lag(ts, k=5):
 
 
 Implements:
