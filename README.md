@@ -8,10 +8,10 @@ Linear Regression vs Neural Networks (Streamlit)
 1. Purpose of the Project
 
     1.1 This project builds an interactive Streamlit application to model and predict COVID-19 confirmed case counts using:
-* a distributed lag linear regression (OLS)
-* Fully connected neural networks with user-controlled architecture
+    * a distributed lag linear regression (OLS)
+    * Fully connected neural networks with user-controlled architecture
 
-1.2 The goal is to compare traditional regression with neural networks under different architectural choices and training settings.
+    1.2 The goal is to compare traditional regression with neural networks under different architectural choices and training settings.
 
 2. How to Run the Code
 Step 1: Install Required Packages
